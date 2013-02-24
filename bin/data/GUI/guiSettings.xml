@@ -1,0 +1,55 @@
+<Widget>
+    <Kind>2</Kind>
+    <Name>Save To Twitter</Name>
+    <Value>0</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>Save To File</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>Trails</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>Show Clock</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>Show Graph</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>2</Kind>
+    <Name>Show Values</Name>
+    <Value>1</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>Time Between Saves</Name>
+    <Value>113.333335876</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>Motion Threshold</Name>
+    <Value>82.879997253</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>Trails Amount</Name>
+    <Value>0.949999988</Value>
+</Widget>
+<Widget>
+    <Kind>4</Kind>
+    <Name>Blur Amount</Name>
+    <Value>3.000000000</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>Pet Name</Name>
+    <Value>Margot</Value>
+</Widget>

@@ -1,0 +1,45 @@
+<Widget>
+    <Kind>12</Kind>
+    <Name>Consumer Secret</Name>
+    <Value>Get this from the Twitter API</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>TLPhrase</Name>
+    <Value>moved in the top left. #doggifer</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>Consumer Token</Name>
+    <Value>Get this from the Twitter API</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>TRPhrase</Name>
+    <Value>moved in the top right. #doggifer</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>oAuth Token</Name>
+    <Value>Get this from the Twitter API</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>BLPhrase</Name>
+    <Value>moved in the bottom left. #doggifer</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>oAuth Secret</Name>
+    <Value>Get This from the Twitter API</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>BRPhrase</Name>
+    <Value>moved in the bottom right. #doggifer</Value>
+</Widget>
+<Widget>
+    <Kind>12</Kind>
+    <Name>Twit Pic</Name>
+    <Value>Get this from the Twit Pic API</Value>
+</Widget>
