@@ -307,7 +307,7 @@ void testApp::draw(){
     }
     
     
-    if ((TL>curAvgTL+motionThresh || TR>curAvgTR+motionThresh || BR>curAvgTR+motionThresh || BL>curAvgTR+motionThresh) && allowSave) { //if a threshold is crossed and it is time to save a new gif, then create the new pet tweet to be used
+    if ((TL>curAvgTL+motionThresh || TR>curAvgTR+motionThresh || BR>curAvgBR+motionThresh || BL>curAvgBL+motionThresh) && allowSave) { //if a threshold is crossed and it is time to save a new gif, then create the new pet tweet to be used
         if(TL>curAvgTL+motionThresh){
             petTweet = petName+" " + TLPhrase +" "+"Motion Amount:" + ofToString(TL);
         }
@@ -315,10 +315,10 @@ void testApp::draw(){
             petTweet = petName+" " + TRPhrase +" "+"Motion Amount:"+ofToString(TR);
         }
         else if(BR>curAvgBR+motionThresh){
-            petTweet = petName+" " + BLPhrase +" "+"Motion Amount:"+ofToString(BR);
+            petTweet = petName+" " + BRPhrase +" "+"Motion Amount:"+ofToString(BR);
         }
         else if(BL>curAvgBL+motionThresh){
-            petTweet = petName+" " + BRPhrase +" "+"Motion Amount:"+ofToString(BL);
+            petTweet = petName+" " + BLPhrase +" "+"Motion Amount:"+ofToString(BL);
         }
         cout <<"-----------------Motion Trigger!---------------------" <<endl;
         cout <<petTweet<<endl;
@@ -582,8 +582,8 @@ void testApp::UISetup(){
     TLGraph = (ofxUIMovingGraph *) ui->addWidgetDown(new ofxUIMovingGraph(150, 40, buffer, 256, 0, 3000, "Top Left Motion"));
     
     TRGraph = (ofxUIMovingGraph *) ui->addWidgetRight(new ofxUIMovingGraph(150, 40, buffer, 256, 0, 3000, "Top Right Motion"));
-    BLGraph = (ofxUIMovingGraph *) ui->addWidgetDown(new ofxUIMovingGraph(150, 40, buffer, 256, 0, 3000, "Bottom Right Motion"));
-    BRGraph = (ofxUIMovingGraph *) ui->addWidgetRight(new ofxUIMovingGraph(150, 40, buffer, 256, 0, 3000, "Bottom Left Motion"));
+    BLGraph = (ofxUIMovingGraph *) ui->addWidgetDown(new ofxUIMovingGraph(150, 40, buffer, 256, 0, 3000, "Bottom Left Motion"));
+    BRGraph = (ofxUIMovingGraph *) ui->addWidgetRight(new ofxUIMovingGraph(150, 40, buffer, 256, 0, 3000, "Bottom Right Motion"));
     ofAddListener(ui->newGUIEvent, this, &testApp::guiEvent); 
     ui->loadSettings("GUI/guiSettings.xml"); 
     
@@ -609,7 +609,7 @@ void testApp::UISetup(){
     lowUI->addWidgetDown(new ofxUILabel("oAuth Token", OFX_UI_FONT_SMALL)); 
         lowUI->addWidgetRight(new ofxUITextInput("oAuth Token", oAuthToken, 500));
         lowUI->addWidgetRight(new ofxUILabel("Bottom Left Phrase", OFX_UI_FONT_SMALL)); 
-        lowUI->addWidgetRight(new ofxUITextInput("BLPhrase", TRPhrase, 500));
+        lowUI->addWidgetRight(new ofxUITextInput("BLPhrase", BLPhrase, 500));
 
     lowUI->addWidgetDown(new ofxUILabel("oAuth Secret", OFX_UI_FONT_SMALL)); 
         lowUI->addWidgetRight(new ofxUITextInput("oAuth Secret", oAuthSecret, 500));
@@ -716,7 +716,7 @@ void testApp::guiEvent(ofxUIEventArgs &e)
             TRPhrase = ofSystemTextBoxDialog("Phrase for Top Right", TRPhrase);
             cout<<"loadbang:" <<loadBang<<endl;
             textInput->setTextString(TRPhrase);
-            cout<<"TL Phrase: " + TRPhrase<<endl;
+            cout<<"TR Phrase: " + TRPhrase<<endl;
         }
 	}
     else if(name == "BLPhrase")
